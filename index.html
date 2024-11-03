@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style.css">
+    <title>Cadastro</title>
+</head>
+<body>
+    <main>
+        <h1>Cadastro de Personagem</h1>
+        <section id="formulario">
+            <article id="info_criador">
+                <h2>Info do criador:</h2>
+                <label>Nome</label>
+                <input id="nameCriador" type="text" placeholder="Digite aqui o seu nome">
+            </article>
+
+            <article id="info_personagem">
+                <h2>Info do Personagem:</h2>
+                <label>Nome</label>
+                <input id="namePerso" type="text" placeholder="Digite aqui o nome do Personagem">
+                <label>Raça do Personagem</label>
+                <input id="racaPerso" type="text" placeholder="Digite aqui a raça do Personagem">
+                <label>Idade do Personagem</label>
+                <input id="idadePerso" type="number" placeholder="Digite aqui a idade do Personagem">
+                <label>Classe</label>
+                <input id="classePerso" type="text" placeholder="Digite qual a raça do Personagem">
+            </article>
+
+            <button id="submit">Enviar Dados</button>
+        </section>
+
+        <section id="card">
+            <h1>Info Personagem</h1>
+            <label>Nome do criador: <span class="span"></span></label>
+            <label>Nome do Personagem: <span class="span"></span></label> 
+            <label>Raça do Personagem: <span class="span"></span></label>
+            <label>Idade do Personagem: <span class="span"></span></label>
+        </section>
+    </main>
+    <script src="Cadastro.js"></script>
+</body>
+</html>
