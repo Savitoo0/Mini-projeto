@@ -10,13 +10,16 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100svh;
+    background-color: aquamarine;
 }
 main {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
+    gap: 1rem;
+    background-color:gold;
+    border-radius: 3%;
     /* &#input {
         border: 5px;
       } */
@@ -25,7 +28,8 @@ main {
 #formulario {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    background-color: gold;
+    gap: 1rem;
 }
 
 #info_personagem {
@@ -39,6 +43,7 @@ main {
     border: solid 2px;
     border-radius: 10px;
     padding: 1rem;
+    background-color: blanchedalmond;
 }
 
 #info_criador > input,
@@ -55,4 +60,9 @@ main {
   border: solid 2px;
   border-radius: 10px;
   padding: 1rem;
+  background-color: blanchedalmond;
+}
+
+#nome {
+    gap: 1rem;
 }

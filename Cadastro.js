@@ -4,6 +4,8 @@ const infoPerso = {
     nome: document.getElementById("namePerso"),
     raca: document.getElementById("racaPerso"),
     idade: document.getElementById("idadePerso"),
+    classe: document.getElementByid("classePerso"),
+    nivel: document.getElementByid("nivelPerso")
   };
   const button = document.getElementById("submit");
   const spans = document.querySelectorAll(".span");
@@ -19,33 +21,38 @@ class Criador {
     }
 }
 
-class Personagem extends Criador {
-    constructor(nomeCriador, nomePerso, raca, idade, classePerso) {
-      super(nomeCriador);
-      this.nomePerso = nomePerso;
-      this.raca = raca;
-      this.idade = idade;
-      this.classePerso = classePerso;
-    }
+formCadastro.addEventListener('submit', (event) => {
+  event.preventDefault();
 
-exibirPerso() {
-    spans[0].innerText = this.nomeCriador;
-    spans[1].innerText = this.nomePerso;
-    spans[2].innerText = this.raca;
-    spans[3].innerText = this.idade;
-    spans[4].innerText = this.classePerso;
-  }
-}
+  const nome = document.getElementById('namePerso').value;
+  const classe = document.getElementById('classePerso').value;
+  const raca = document.getElementById('racaPerso').value;
+  const nivel = parseInt(document.getElementById('nivelPerso').value);
 
-// EVENTOS
-button.addEventListener("click", () => {
-    const novoPerso = new Perso (
-      nomeCriador.value,
-      infoPerso.nome.value,
-      infoPerso.raca.value,
-      infoPerso.idade.value,
-      infoPerso.classePerso.value
-    );
-  
-    novoPerso.exibirPerso();
-  });
+  const novoPersonagem = new Personagem(nome, classe, raca, nivel);
+  personagens.push(novoPersonagem);
+
+  formCadastro.reset();
+  renderizarPersonagens();
+});
+
+
+const Perso= [];
+
+/*const formCadastro = document.getElementById('info_personagem'); */
+const tabelaPersonagens = document.getElementById('infor_personagem');
+
+formCadastro.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    const nome = document.getElementById('nome').value;
+    const classe = document.getElementById('classe').value;
+    const raca = document.getElementById('raca').value;
+    const nivel = parseInt(document.getElementById('nivel').value);
+
+    const novoPersonagem = new Personagem(nome, classe, raca, nivel);
+    personagens.push(novoPersonagem);
+
+    formCadastro.reset();
+    renderizarPersonagens();
+});
